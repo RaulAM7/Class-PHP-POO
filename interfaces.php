@@ -49,3 +49,25 @@ class Square implements Drawable, Resizable
         echo 'I can Resize';
     }
 }
+
+// Interface herencia
+
+interface Animal
+{
+    public function eat();
+}
+interface Mammal extends Animal
+{
+    public function drinkMilk();
+}
+
+class Dog implements Mammal
+{
+    public function eat(){
+        echo "I am eating";
+    }
+    public function drinkMilk()
+    {
+        echo 'Ñam Ñam Im drinking milk';
+    }
+}
