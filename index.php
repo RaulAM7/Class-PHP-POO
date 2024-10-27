@@ -85,3 +85,35 @@ class Motorbike
     }
 }
 
+
+// Probando a extender clases
+class CarHijo extends Car 
+{
+    protected $propiedadCarHijo = 'constant';
+
+    public function __construct(string $make, string $model, int $year)
+    {
+        parent::__construct($make, $model, $year);
+    }
+}
+
+$newCarHijo = CarHijo::create('Tesla', 'Model X', 2020);
+print_r($newCarHijo->getProperties());
+
+// Abstract classes
+
+abstract class Vehicles
+{
+    public $ruedas;
+    public $alto;
+    public $ancho;
+    public $peso;
+
+    public function __construct(int $ruedas, int  $alto, int $ancho, int $peso)
+    {
+        $this->ruedas = $ruedas;
+        $this->alto = $alto;
+        $this->ancho = $ancho;
+        $this->peso = $peso;
+    }
+}
