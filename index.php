@@ -16,12 +16,18 @@ class Car
         $this->model = $model;
         $this->year = $year;
     }
+    public function getProperties()
+    {
+        return $this;
+    }
     public function __destruct()
     {
         echo 'Distroying: '. $this->make.' '.$this->model.PHP_EOL;
     }
 }
 $myCar = new Car('Toyota', 'Corolla', 2020);
+print_r($myCar->getProperties());
+
 
 // Definir propiedades con el nuevo metodo de PHP 8: promoted properties in constructor
 class Motorbike 
