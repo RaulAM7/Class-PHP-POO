@@ -104,10 +104,10 @@ print_r($newCarHijo->getProperties());
 
 abstract class Vehicles
 {
-    public $ruedas;
-    public $alto;
-    public $ancho;
-    public $peso;
+    protected $ruedas;
+    protected $alto;
+    protected $ancho;
+    protected $peso;
 
     public function __construct(int $ruedas, int  $alto, int $ancho, int $peso)
     {
@@ -116,4 +116,10 @@ abstract class Vehicles
         $this->ancho = $ancho;
         $this->peso = $peso;
     }
+    abstract function arrancar();
+    abstract function getProperties();
+    abstract function instantiate();
+    abstract function acelerar();
+    abstract function frenar();
+    
 }
