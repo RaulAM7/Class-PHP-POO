@@ -28,3 +28,24 @@ class Shapes implements Shape
         return ($this->height + $this->widht) * 2;
     }
 }
+
+// Multiple interface implementations
+
+interface Drawable
+{
+    public function draw();
+}
+interface Resizable
+{
+    public function resize();
+}
+
+class Square implements Drawable, Resizable
+{
+    public function draw(){
+        echo 'I can Draw';
+    }
+    public function resize(){
+        echo 'I can Resize';
+    }
+}
